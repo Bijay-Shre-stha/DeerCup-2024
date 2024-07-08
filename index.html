@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEER CUP - 2024 </title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+    :root {
+        --primary-color: #0e0e1a;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .timing__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .timing__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 14px;
+    }
+
+    .timing__box__number {
+        font-size: 120px;
+        font-weight: 900;
+        color: var(--primary-color);
+    }
+
+    .timing__box__text {
+        color: var(--primary-color);
+    }
+
+    .timing__box__colon {
+        font-size: 120px;
+        font-weight: 900;
+        color: var(--primary-color);
+    }
+
+    .timing_box_container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .logo__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo__image {
+        width: 250px;
+    }
+
+    .login__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        flex-direction: column;
+    }
+
+    .login__container input {
+        padding: 10px;
+        margin: 10px;
+        width: 400px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 20px;
+        outline: none;
+        transition: all 0.1s ease-in-out;
+        border: 2px solid #f1f2f2;
+
+    }
+
+    .login__container input:focus {
+        border: 2px solid #f1f2f2;
+    }
+
+    .login__container button {
+        padding: 10px 40px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: 20px;
+        border: 2px solid #f1f2f2;
+        color: var(--primary-color);
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .container_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('./bgImage.png');
+        background-size: cover;
+        min-height: 100vh;
+        background-repeat: no-repeat; 
+    }
+
+    @media screen and (max-width: 815px) {
+        .login__container input {
+            width: 350px;
+        }
+
+        .timing__box__number {
+            font-size: 100px;
+        }
+
+        .timing__box__colon {
+            font-size: 100px;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .login__container input {
+            width: 300px;
+        }
+
+        .login__container button {
+            padding: 10px 20px;
+        }
+
+        .timing__box__number {
+            font-size: 80px;
+        }
+
+        .timing__box__colon {
+            font-size: 80px;
+        }
+    }
+
+    @media screen and (max-width: 590px) {
+        .login__container input {
+            width: 300px;
+        }
+
+        .timing__box__number {
+            font-size: 60px;
+        }
+
+        .timing__box__colon {
+            font-size: 60px;
+        }
+    }
+
+    @media screen and (max-width: 490px) {
+
+        .login__container input {
+            width: 300px;
+        }
+
+        .timing__box__number {
+            font-size: 50px;
+        }
+
+        .timing__box__colon {
+            font-size: 50px;
+        }
+    }
+
+    @media screen and (max-width: 445px) {
+        .login__container input {
+            width: 275px;
+        }
+
+        .timing__box__number {
+            font-size: 40px;
+        }
+
+        .timing__box__colon {
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (max-width: 380px) {
+        .login__container input {
+            width: 250px;
+        }
+
+        .timing__box__number {
+            font-size: 30px;
+        }
+
+        .timing__box__colon {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 325px) {
+        .login__container input {
+            width: 225px;
+        }
+
+        .timing__box__number {
+            font-size: 25px;
+        }
+
+        .logo__image {
+            width: 200px;
+        }
+
+        .timing__box__colon {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 305px) {
+        .login__container input {
+            width: 200px;
+        }
+
+        .timing__box__number {
+            font-size: 21px;
+        }
+
+        .logo__image {
+            width: 150px;
+        }
+
+        .timing__box__colon {
+            font-size: 21px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container_section">
+        <div class="timing__container">
+            <div class="timing__box">
+                <div class="timing_box_container">
+                    <div class="timing__box__number"></div>
+                    <div class="timing__box__colon">:</div>
+                </div>
+                <div class="timing__box__text"></div>
+            </div>
+
+            <div class="timing__box">
+                <div class="timing_box_container">
+                    <div class="timing__box__number"></div>
+                    <div class="timing__box__colon">:</div>
+                </div>
+            </div>
+
+            <div class="timing__box">
+                <div class="timing_box_container">
+                    <div class="timing__box__number"></div>
+                    <div class="timing__box__colon">:</div>
+                </div>
+            </div>
+
+            <div class="timing__box">
+                <div class="timing_box_container">
+                    <div class="timing__box__number"></div>
+                </div>
+                <div class="timing__box__text"></div>
+            </div>
+        </div>
+
+        <section class="logo__section">
+            <img src="./logo.png" alt="Deer Cup" class="logo__image" />
+        </section>
+
+        <form class="login__container">
+            <input class='username' type="text" autocapitalize="off" id="username" placeholder="Username">
+
+            <input type="password" autocapitalize="off" id="password" placeholder="Password" />
+
+            <button type="submit">Log In</button>
+        </form>
+
+    </div>
+</body>
+<script>
+    const targetDate = new Date("2024-07-25T09:00:00").getTime();
+
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            document.querySelector('.counter__container').textContent = 'Event Started';
+        } else {
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.querySelector('.timing__box__number').textContent = addLeadingZero(days);
+
+
+            document.querySelector('.timing__box:nth-child(2) .timing__box__number').textContent = addLeadingZero(hours);
+
+            document.querySelector('.timing__box:nth-child(3) .timing__box__number').textContent = addLeadingZero(minutes);
+
+            document.querySelector('.timing__box:nth-child(4) .timing__box__number').textContent = addLeadingZero(seconds);
+
+        }
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function addLeadingZero(number) {
+        return number < 10 ? `0${number}` : number;
+    }
+</script>
+
+</html>
